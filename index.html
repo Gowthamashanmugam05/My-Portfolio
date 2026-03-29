@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gowthama Shanmugam V | AI Engineer Portfolio</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Gowthama Shanmugam V - Aspiring AI Engineer, Python Developer, and Full Stack Enthusiast.">
+    <meta name="keywords" content="AI Engineer, ML Engineer, Python, Flask, Django, Portfolio, Gowthama Shanmugam V">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700;800&family=Russo+One&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animation Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Preloader / Intro -->
+    <div class="preloader" id="preloader">
+        <svg viewBox="0 0 2500 300">
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                WELCOME TO MY PORTFOLIO
+            </text>
+        </svg>
+    </div>
+
+    <!-- Cursor Follower -->
+    <div class="cursor-follower" id="cursor"></div>
+    
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="#" class="logo">My Portfolio<span>.</span></a>
+            <ul class="nav-links" aria-label="Primary Navigation">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Open Navigation Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content" data-aos="fade-up">
+            <div class="hero-img-container">
+                <img src="1-modified.png" alt="Gowthama Shanmugam V" class="hero-profile-img">
+            </div>
+            <h2 class="hero-greeting">Hi, I'm</h2>
+            <h1 class="hero-name">Gowthama Shanmugam V</h1>
+            <h2 class="hero-title"><span id="typed-text"></span></h2>
+            <p class="hero-tagline">"Building intelligent solutions with AI and real-world impact"</p>
+            <div class="hero-btns">
+                <a href="Gowthama_Shanmugam_V_Resume.pdf" class="btn btn-outline btn-pulse" download>Download Resume <i class="fa-solid fa-download"></i></a>
+                <button id="voice-bio" class="btn btn-secondary"><i class="fa-solid fa-volume-high"></i> AI Voice Intro</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">About <span>Me</span></h2>
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <p>I am a passionate <strong>Computer Science student</strong> at SNS College of Engineering (2023–2027), dedicated to pushing the boundaries of Artificial Intelligence.</p>
+                    <p>Fueled by a relentless drive for solving real-world challenges through <strong>Artificial Intelligence</strong>, I bridge the gap between complex algorithms and practical impact. With a technical foundation in <strong>Python</strong>, <strong>Machine Learning</strong>, and modern <strong>LLM architectures (RAG, MCP)</strong>, I architect intelligent agents and scalable web applications using <strong>MERN</strong>, <strong>Flask</strong>, and <strong>Django</strong>.</p>
+                    <p>My expertise extends to automation with <strong>n8n</strong> and the cutting edge of <strong>Agentic AI</strong>. I am a rapid learner, deeply committed to exploring the frontiers of <strong>Generative AI</strong> to build innovative solutions with a global impact.</p>
+                </div>
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="about-image-wrapper">
+                        <svg viewBox="0 0 200 200" class="about-blob-svg">
+                            <defs>
+                                <clipPath id="blobClip">
+                                    <path d="M43.1,-68.5C56.2,-58.6,67.5,-47.3,72.3,-33.9C77.2,-20.5,75.5,-4.9,74.2,11.3C72.9,27.6,71.9,44.5,63.8,57.2C55.7,69.8,40.6,78.2,25.5,79.2C10.4,80.1,-4.7,73.6,-20.9,69.6C-37.1,65.5,-54.5,63.9,-66,54.8C-77.5,45.8,-83.2,29.3,-85.7,12.3C-88.3,-4.8,-87.7,-22.3,-79.6,-34.8C-71.5,-47.3,-55.8,-54.9,-41.3,-64.2C-26.7,-73.6,-13.4,-84.7,0.8,-86C15,-87.2,29.9,-78.5,43.1,-68.5Z" transform="translate(100 100)"/>
+                                </clipPath>
+                                <path id="textPathRef" d="M43.1,-68.5C56.2,-58.6,67.5,-47.3,72.3,-33.9C77.2,-20.5,75.5,-4.9,74.2,11.3C72.9,27.6,71.9,44.5,63.8,57.2C55.7,69.8,40.6,78.2,25.5,79.2C10.4,80.1,-4.7,73.6,-20.9,69.6C-37.1,65.5,-54.5,63.9,-66,54.8C-77.5,45.8,-83.2,29.3,-85.7,12.3C-88.3,-4.8,-87.7,-22.3,-79.6,-34.8C-71.5,-47.3,-55.8,-54.9,-41.3,-64.2C-26.7,-73.6,-13.4,-84.7,0.8,-86C15,-87.2,29.9,-78.5,43.1,-68.5Z" transform="translate(100 100)"/>
+                            </defs>
+                            <image href="1-modified.png" x="0" y="5" width="200" height="200" preserveAspectRatio="xMidYMid slice" clip-path="url(#blobClip)"/>
+                            <text class="blob-text-content">
+                                <textPath href="#textPathRef" startOffset="0%">
+                                    Discipline • Fitness • Focus • Self-Control • Consistency • Positive Mindset • Respect & Humility • 
+                                    <animate attributeName="startOffset" from="0%" to="100%" dur="20s" repeatCount="indefinite" />
+                                </textPath>
+                                <textPath href="#textPathRef" startOffset="100%">
+                                    Discipline • Fitness • Focus • Self-Control • Consistency • Positive Mindset • Respect & Humility • 
+
+                                    <animate attributeName="startOffset" from="-100%" to="0%" dur="20s" repeatCount="indefinite" />
+                                </textPath>
+                            </text>
+                        </svg>
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="section education">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Education & <span>Certifications</span></h2>
+            
+            <div class="edu-new-grid">
+                <!-- College -->
+                <div class="edu-expanded-card glass" data-aos="fade-up">
+                    <div class="edu-img-side">
+                        <img src="snsce.jpeg" alt="SNS College of Engineering" class="edu-inst-img">
+                        <div class="edu-badge">College</div>
+                    </div>
+                    <div class="edu-info-side">
+                        <div class="edu-header">
+                            <h3>B.E. Computer Science & Technology</h3>
+                            <span class="edu-year">2023 — 2027</span>
+                        </div>
+                        <h4 class="inst-name">SNS College of Engineering, Coimbatore</h4>
+                        <div class="edu-stats-row">
+                            <span class="edu-stat"><i class="fa-solid fa-star"></i> CGPA: <strong>9.3/10</strong></span>
+                            <span class="edu-stat"><i class="fa-solid fa-location-dot"></i> Coimbatore, India</span>
+                        </div>
+                        <div class="edu-details-lists">
+                            <div class="edu-list-box">
+                                <h5><i class="fa-solid fa-trophy"></i> Key Events & Culturals</h5>
+                                <ul>
+                                    <li>Participated in <strong>SNS Odyssey</strong> Tech Symposium</li>
+                                    <li>Active member of <strong>SNS iHub</strong> Innovation Cell</li>
+                                    <li>Joined University Cultural Fests and AI Hackathons</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School -->
+                <div class="edu-expanded-card glass" data-aos="fade-up" data-aos-delay="100">
+                    <div class="edu-img-side">
+                        <img src="school.jpeg" alt="Jaycess Matriculation Higher Secondary School" class="edu-inst-img">
+                        <div class="edu-badge">School</div>
+                    </div>
+                    <div class="edu-info-side">
+                        <div class="edu-header">
+                            <h3>Higher Secondary & SSLC</h3>
+                            <span class="edu-year">Graduated 2023</span>
+                        </div>
+                        <h4 class="inst-name">Jaycess Matriculation Higher Secondary School</h4>
+                        <div class="edu-stats-row">
+                            <span class="edu-stat"><i class="fa-solid fa-award"></i> 12th: <strong>92%</strong></span>
+                            <span class="edu-stat"><i class="fa-solid fa-award"></i> 10th: <strong>95%</strong></span>
+                            <span class="edu-stat"><i class="fa-solid fa-location-dot"></i> Coimbatore, India</span>
+                        </div>
+                        <div class="edu-details-lists">
+                            <div class="edu-list-box">
+                                <h5><i class="fa-solid fa-palette"></i> Activities & Events</h5>
+                                <ul>
+                                    <li>School <strong>Science Expo</strong> Runner Up</li>
+                                    <li>Joined Inter-School <strong>Sports Meet</strong> (Athletics)</li>
+                                    <li>Participated in Annual Day Culturals (Dance & Choir)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-grid-new" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="cert-label"><i class="fa-solid fa-certificate"></i> Key Certifications</h3>
+                <div class="cert-items-wrap">
+                    <div class="cert-card glass">Power BI (Skill Nation)</div>
+                    <div class="cert-card glass">Advanced AI Tools (Be10x)</div>
+                    <div class="cert-card glass">Machine Learning (Coursera)</div>
+                    <div class="cert-card glass">AWS, Deloitte, TATA (Forage)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Technical <span>Skills</span></h2>
+            <div class="skills-wrapper">
+                <!-- Programming -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3><i class="fa-solid fa-code"></i> Programming</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Python (OOP, DSA)</span><span><span class="skill-number" data-target="90">0</span>%</span></div>
+                            <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI & Data -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fa-solid fa-brain"></i> AI & Data Science</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Machine Learning (Supervised)</span><span><span class="skill-number" data-target="85">0</span>%</span></div>
+                            <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Pandas, NumPy, Scikit-learn</span><span><span class="skill-number" data-target="88">0</span>%</span></div>
+                            <div class="progress-bar"><div class="progress" data-width="88%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>NLP (NLTK)</span><span><span class="skill-number" data-target="80">0</span>%</span></div>
+                            <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>GenAI & Agent AI</span><span><span class="skill-number" data-target="75">0</span>%</span></div>
+                            <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fa-solid fa-globe"></i> Web Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Flask / Django</span><span><span class="skill-number" data-target="82">0</span>%</span></div>
+                            <div class="progress-bar"><div class="progress" data-width="82%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>React / MERN Stack</span><span><span class="skill-number" data-target="70">0</span>%</span></div>
+                            <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fa-solid fa-database"></i> Databases</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>MongoDB, MySQL, Firebase</span><span><span class="skill-number" data-target="85">0</span>%</span></div>
+                            <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tools-soft-skills container" data-aos="zoom-in">
+                <div class="glass tools-section">
+                    <h3>Tools Used</h3>
+                    <div class="tool-icons">
+                        <span title="GitHub"><i class="fa-brands fa-github"></i></span>
+                        <span title="VS Code"><i class="fa-solid fa-terminal"></i></span>
+                        <span title="PyCharm"><i class="fa-solid fa-p"></i></span>
+                        <span title="Figma"><i class="fa-brands fa-figma"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Selected <span>Projects</span></h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass" data-aos="flip-left">
+                    <div class="project-img"><img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2071&auto=format&fit=crop" alt="AI Polyglot Dictionary"></div>
+                    <div class="project-info">
+                        <h3>AI Polyglot Dictionary</h3>
+                        <p>An AI-powered multilingual dictionary that translates and explains terms in various contexts.</p>
+                        <div class="tech-stack">
+                            <span>Python</span><span>NLP</span><span>Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/gowthama-shanmugam/AI-Polyglot-Dictionary" target="_blank" class="btn-icon"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass highlighted-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="project-badge">Winner - Internal</div>
+                    <div class="project-img"><img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&auto=format&fit=crop" alt="Lunar Crater Enhancement"></div>
+                    <div class="project-info">
+                        <h3>SIH: Chandrayaan-2 Enhancement</h3>
+                        <p>Enhancement of Lunar Crater Images from Chandrayaan-2 using Deep Learning for SIH Hackathon.</p>
+                        <div class="tech-stack">
+                            <span>TensorFlow</span><span>Computer Vision</span><span>NASA Data</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn-icon"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass premium-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="project-badge">Ongoing</div>
+                    <div class="project-img"><img src="https://images.unsplash.com/photo-1548092372-0d1bd40894a3?q=80&w=2070&auto=format&fit=crop" alt="OPULUXE AI"></div>
+                    <div class="project-info">
+                        <h3>OPULUXE AI</h3>
+                        <p>AI-powered luxury shopping assistant designed for high-end retail personalized experiences.</p>
+                        <div class="tech-stack">
+                            <span>GenAI</span><span>Django</span><span>Vector DB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn-icon"><i class="fa-brands fa-github"></i> Concept</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass" data-aos="flip-left" data-aos-delay="300">
+                    <div class="project-img"><img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" alt="ODOO Hackathon"></div>
+                    <div class="project-info">
+                        <h3>ODOO Hackathon Project</h3>
+                        <p>A specialized ERP automation tool developed for the ODOO national hackathon event.</p>
+                        <div class="tech-stack">
+                            <span>Python</span><span>PostgreSQL</span><span>ERP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn-icon"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats Section -->
+    <section class="section github-stats">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="zoom-in">My <span>Activity</span></h2>
+            <div class="github-cards-container" data-aos="fade-up">
+                <img src="https://github-readme-stats.vercel.app/api?username=gowthama-shanmugam&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="GitHub Stats">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gowthama-shanmugam&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="Top Languages">
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Timeline) -->
+    <section id="experience" class="section timeline">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Professional <span>Timeline</span></h2>
+            <div class="timeline-container">
+                <!-- Item 1 -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <span class="date">Duration: 1 Month</span>
+                        <h3>WebGen Technology</h3>
+                        <p class="role">MERN Stack Intern</p>
+                        <p class="desc">Focused on building responsive frontend components and API integration using Node.js and React.</p>
+                        <div class="tech-tags">
+                            <span>React</span><span>Express</span><span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                         <span class="date">Duration: 1 Month</span>
+                        <h3>CodeSoft</h3>
+                        <p class="role">Python Intern</p>
+                        <p class="desc">Implemented automation scripts and handled data processing tasks using advanced Python libraries.</p>
+                        <div class="tech-tags">
+                            <span>Python</span><span>Data Analysis</span><span>Automation</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <span class="date">Duration: 1 Month</span>
+                        <h3>Prodigy InfoTech</h3>
+                        <p class="role">Machine Learning Intern</p>
+                        <p class="desc">Worked on predictive modeling and regression analysis projects using Scikit-learn and Pandas.</p>
+                        <div class="tech-tags">
+                            <span>ML</span><span>Scikit-learn</span><span>Data Science</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="zoom-in">Mentors <span>Feedback</span></h2>
+            <div class="testimonials-grid">
+                <div class="glass testimonial-card" data-aos="fade-up">
+                    <p>"Gowthama's approach to AI challenges is exceptionally analytical. His work on the Chandrayaan-2 project was outstanding."</p>
+                    <div class="testi-author">
+                        <strong>Dr. Ramesh Kumar</strong>
+                        <span>Professor @ SNSCE</span>
+                    </div>
+                </div>
+                <div class="glass testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <p>"A highly motivated student with strong Python skills. His AI Polyglot Dictionary showed great innovation."</p>
+                    <div class="testi-author">
+                        <strong>Project Lead</strong>
+                        <span>WebGen Tech</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+
+
+    <!-- Thank You Section -->
+    <section class="thank-you-section" data-aos="zoom-in">
+        <div class="container">
+            <h2 class="thank-you-text">
+                <span>THANK YOU FOR SEEING MY PORTFOLIO!</span>
+            </h2>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Get In <span>Touch</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-up">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>gowthama.shanmugam@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 XXXXX XXXXX</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/gowthama-shanmugam" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/gowthama-shanmugam" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fa-solid fa-code"></i></a> <!-- LeetCode -->
+                    </div>
+                </div>
+                <div class="contact-form-container glass" data-aos="fade-left">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" aria-label="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" aria-label="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" aria-label="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" aria-label="Send Message">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Gowthama Shanmugam V. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot Assistant -->
+    <div class="chatbot-wrapper" id="chatbot">
+        <div class="chatbot-btn glass" id="chat-toggle">
+            <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="chat-container glass" id="chat-window">
+            <div class="chat-header">
+                <h3>AI Assistant</h3>
+                <button id="close-chat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">Hello! I'm Gowthama's AI assistant. How can I help you today?</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type a question...">
+                <button id="chat-send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
