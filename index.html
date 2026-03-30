@@ -20,7 +20,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Custom Style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body class="dark-theme">
     <!-- Preloader / Intro -->
@@ -53,11 +53,16 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="hamburger" aria-label="Open Navigation Menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle light/dark mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button class="hamburger" aria-label="Open Navigation Menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -65,14 +70,14 @@
     <header class="hero" id="home">
         <div class="hero-content" data-aos="fade-up">
             <div class="hero-img-container">
-                <img src="1-modified.png" alt="Gowthama Shanmugam V" class="hero-profile-img">
+                <img src="assets/images/1-modified.WebP" alt="Gowthama Shanmugam V" class="hero-profile-img" loading="lazy">
             </div>
             <h2 class="hero-greeting">Hi, I'm</h2>
             <h1 class="hero-name">Gowthama Shanmugam V</h1>
             <h2 class="hero-title"><span id="typed-text"></span></h2>
             <p class="hero-tagline">"Building intelligent solutions with AI and real-world impact"</p>
             <div class="hero-btns">
-                <a href="Gowthama_Shanmugam_V_Resume.pdf" class="btn btn-outline btn-pulse" download>Download Resume <i class="fa-solid fa-download"></i></a>
+                <a href="assets/docs/Gowthama_Shanmugam_V_Resume.pdf" class="btn btn-outline btn-pulse" download>Download Resume <i class="fa-solid fa-download"></i></a>
                 <button id="voice-bio" class="btn btn-secondary"><i class="fa-solid fa-volume-high"></i> AI Voice Intro</button>
             </div>
         </div>
@@ -97,7 +102,7 @@
                                 </clipPath>
                                 <path id="textPathRef" d="M43.1,-68.5C56.2,-58.6,67.5,-47.3,72.3,-33.9C77.2,-20.5,75.5,-4.9,74.2,11.3C72.9,27.6,71.9,44.5,63.8,57.2C55.7,69.8,40.6,78.2,25.5,79.2C10.4,80.1,-4.7,73.6,-20.9,69.6C-37.1,65.5,-54.5,63.9,-66,54.8C-77.5,45.8,-83.2,29.3,-85.7,12.3C-88.3,-4.8,-87.7,-22.3,-79.6,-34.8C-71.5,-47.3,-55.8,-54.9,-41.3,-64.2C-26.7,-73.6,-13.4,-84.7,0.8,-86C15,-87.2,29.9,-78.5,43.1,-68.5Z" transform="translate(100 100)"/>
                             </defs>
-                            <image href="1-modified.png" x="0" y="5" width="200" height="200" preserveAspectRatio="xMidYMid slice" clip-path="url(#blobClip)"/>
+                            <image href="assets/images/1-modified.WebP" x="0" y="5" width="200" height="200" preserveAspectRatio="xMidYMid slice" clip-path="url(#blobClip)"/>
                             <text class="blob-text-content">
                                 <textPath href="#textPathRef" startOffset="0%">
                                     Discipline • Fitness • Focus • Self-Control • Consistency • Positive Mindset • Respect & Humility • 
@@ -117,6 +122,58 @@
         </div>
     </section>
 
+    <!-- Cinematic Gallery Scroller -->
+    <section class="gallery-scroller" id="gallery">
+        <div class="scroller-container">
+            <div class="scroller-wrapper">
+                <div class="scroller-slide" data-aos="zoom-in">
+                    <img src="assets/images/1gallery.WebP" alt="Personal Gallery 1" loading="lazy" style="object-position: top center;"/>
+                </div>
+                <div class="scroller-slide" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/images/2gallery.Webp" alt="Personal Gallery 2" loading="lazy" style="object-position: top center;"/>
+                </div>
+                <div class="scroller-slide" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/images/3gallery.jpeg" alt="Personal Gallery 3" loading="lazy" style="object-position: top center;"/>
+                </div>
+                <div class="scroller-slide" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="assets/images/4gallery.Webp" alt="Personal Gallery 4" loading="lazy" style="object-position: top center;"/>
+                </div>
+                <div class="scroller-slide" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="assets/images/5gallery.Webp" alt="Personal Gallery 5" loading="lazy" style="object-position: top center;"/>
+                </div>
+                <div class="scroller-slide" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="assets/images/6gallery.Webp" alt="Personal Gallery 6" loading="lazy" style="object-position: top center;"/>
+                </div>
+                <div class="scroller-slide" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="assets/images/7gallery.Webp" alt="Personal Gallery 7" loading="lazy" style="object-position: top center;"/>
+                </div>
+                
+                <!-- Repeat slides for seamless loop -->
+                <div class="scroller-slide">
+                    <img src="assets/images/1gallery.WebP" alt="Personal Gallery 1 Repeat" loading="lazy" style="object-position: top center;"/>
+                </div>
+                <div class="scroller-slide">
+                    <img src="assets/images/2gallery.Webp" alt="Personal Gallery 2 Repeat" loading="lazy" style="object-position: top center;"/>
+                </div>
+                <div class="scroller-slide">
+                    <img src="assets/images/3gallery.jpeg" alt="Personal Gallery 3 Repeat" loading="lazy" style="object-position: top center;"/>
+                </div>
+                <div class="scroller-slide">
+                    <img src="assets/images/4gallery.Webp" alt="Personal Gallery 4 Repeat" loading="lazy" style="object-position: top center;"/>
+                </div>
+                <div class="scroller-slide">
+                    <img src="assets/images/5gallery.Webp" alt="Personal Gallery 5 Repeat" loading="lazy" style="object-position: top center;"/>
+                </div>
+                <div class="scroller-slide">
+                    <img src="assets/images/6gallery.Webp" alt="Personal Gallery 6 Repeat" loading="lazy" style="object-position: top center;"/>
+                </div>
+                <div class="scroller-slide">
+                    <img src="assets/images/7gallery.Webp" alt="Personal Gallery 7 Repeat" loading="lazy" style="object-position: top center;"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Education & Certifications Section -->
     <section id="education" class="section education">
         <div class="container">
@@ -126,27 +183,23 @@
                 <!-- College -->
                 <div class="edu-expanded-card glass" data-aos="fade-up">
                     <div class="edu-img-side">
-                        <img src="snsce.jpeg" alt="SNS College of Engineering" class="edu-inst-img">
+                        <img src="assets/images/snsce.WebP" alt="SNS College of Engineering" class="edu-inst-img" loading="lazy">
                         <div class="edu-badge">College</div>
                     </div>
                     <div class="edu-info-side">
                         <div class="edu-header">
-                            <h3>B.E. Computer Science & Technology</h3>
-                            <span class="edu-year">2023 — 2027</span>
+                            <h3 class="edu-title-main">B.E. Computer Science & Technology <span class="edu-year-inline">2023 — 2027</span></h3>
                         </div>
                         <h4 class="inst-name">SNS College of Engineering, Coimbatore</h4>
                         <div class="edu-stats-row">
-                            <span class="edu-stat"><i class="fa-solid fa-star"></i> CGPA: <strong>9.3/10</strong></span>
-                            <span class="edu-stat"><i class="fa-solid fa-location-dot"></i> Coimbatore, India</span>
+                            <span class="edu-stat"><i class="fa-solid fa-star"></i> CGPA: <strong>7.2</strong></span>
+                            <a href="https://www.google.com/search?q=snsct&sca_esv=a7c356437a2f7860&rlz=1C1CHBF_enIN1167IN1167&sxsrf=ANbL-n71ryGU4Hh80KU5RdbRDMZIVWu6Ng%3A1774863206967&ei=ZkPKaefSOsvdseMP__v0wAY&biw=1008&bih=743&ved=0ahUKEwjnnefXqMeTAxXLbmwGHf89HWgQ4dUDCBE&uact=5&oq=snsct&gs_lp=Egxnd3Mtd2l6LXNlcnAiBXNuc2N0MgoQLhhDGIAEGIoFMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESKAGUL8DWPQEcAF4AZABAJgBwgGgAd8CqgEDMC4yuAEDyAEA-AEBmAIDoAKAA8ICChAAGEcY1gQYsAPCAgQQIxgnwgIKEC4YgAQYigUYQ8ICChAAGIAEGBQYhwLCAgUQLhiABMICChAAGIAEGIoFGEOYAwCIBgGQBgiSBwUxLjEuMaAHkhGyBwUwLjEuMbgH-ALCBwUyLTIuMcgHGoAIAQ&sclient=gws-wiz-serp" target="_blank" class="edu-stat-link"><i class="fa-solid fa-location-dot"></i> Coimbatore, India</a>
                         </div>
                         <div class="edu-details-lists">
                             <div class="edu-list-box">
-                                <h5><i class="fa-solid fa-trophy"></i> Key Events & Culturals</h5>
-                                <ul>
-                                    <li>Participated in <strong>SNS Odyssey</strong> Tech Symposium</li>
-                                    <li>Active member of <strong>SNS iHub</strong> Innovation Cell</li>
-                                    <li>Joined University Cultural Fests and AI Hackathons</li>
-                                </ul>
+                                <button class="btn btn-secondary btn-sm open-edu-popup" data-title="Key Events & Culturals" data-details="Participated in SNS Odyssey Tech Symposium, Active member of SNS iHub Innovation Cell, Joined University Cultural Fests and AI Hackathons." data-img="assets/images/snsce.WebP">
+                                    <i class="fa-solid fa-trophy"></i> Key Events & Culturals
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -155,41 +208,63 @@
                 <!-- School -->
                 <div class="edu-expanded-card glass" data-aos="fade-up" data-aos-delay="100">
                     <div class="edu-img-side">
-                        <img src="school.jpeg" alt="Jaycess Matriculation Higher Secondary School" class="edu-inst-img">
+                        <img src="assets/images/school.WebP" alt="Jaycess Matriculation Higher Secondary School" class="edu-inst-img" loading="lazy">
                         <div class="edu-badge">School</div>
                     </div>
                     <div class="edu-info-side">
                         <div class="edu-header">
-                            <h3>Higher Secondary & SSLC</h3>
-                            <span class="edu-year">Graduated 2023</span>
+                            <h3 class="edu-title-main">Higher Secondary & SSLC <span class="edu-year-inline">Graduated 2023</span></h3>
                         </div>
                         <h4 class="inst-name">Jaycess Matriculation Higher Secondary School</h4>
                         <div class="edu-stats-row">
-                            <span class="edu-stat"><i class="fa-solid fa-award"></i> 12th: <strong>92%</strong></span>
-                            <span class="edu-stat"><i class="fa-solid fa-award"></i> 10th: <strong>95%</strong></span>
-                            <span class="edu-stat"><i class="fa-solid fa-location-dot"></i> Coimbatore, India</span>
+                            <span class="edu-stat"><i class="fa-solid fa-award"></i> 12th: <strong>60%</strong></span>
+                            <span class="edu-stat"><i class="fa-solid fa-award"></i> 10th: <strong>Pass (Corona Batch)</strong></span>
+                            <a href="https://www.google.com/search?sca_esv=a7c356437a2f7860&rlz=1C1CHBF_enIN1167IN1167&sxsrf=ANbL-n57Io0yaYW3S5KJ-dhvA83amfVCfg:1774863421488&q=jaycees+kangayam&source=lnms&fbs=ADc_l-byipRaccqV0jmfPhi1DgzPkIbk0HG8UBQNbHd4S9AjVkuc0t6t4dDUPoihiWakL0i8FftXn9PdAFm5-88rdtO4PZzA6p19DFNubCWL8RUwOCDpAjvC1sbuInDZ-1UO_XufOeEtjYNhtGP7uYLKykYbdA_vLopykQNC_R7pqb1qNUweeDbfFmX2Vx-kMnvlBn6aLcjnT7dW9qpLdVDeL7iaYEsXsl2adgzNDPIbBjE7uniLJKU&sa=X&ved=2ahUKEwiu0oy-qceTAxUzSGwGHfoZBLoQ0pQJegQIBxAB&biw=1008&bih=743&dpr=1.25" target="_blank" class="edu-stat-link"><i class="fa-solid fa-location-dot"></i> Tiruppur, Kangayam</a>
                         </div>
                         <div class="edu-details-lists">
                             <div class="edu-list-box">
-                                <h5><i class="fa-solid fa-palette"></i> Activities & Events</h5>
-                                <ul>
-                                    <li>School <strong>Science Expo</strong> Runner Up</li>
-                                    <li>Joined Inter-School <strong>Sports Meet</strong> (Athletics)</li>
-                                    <li>Participated in Annual Day Culturals (Dance & Choir)</li>
-                                </ul>
+                                <button class="btn btn-secondary btn-sm open-edu-popup" data-title="School Activities" data-details="School Science Expo Runner Up, Joined Inter-School Sports Meet (Athletics), Participated in Annual Day Culturals (Dance & Choir)." data-img="assets/images/school.WebP">
+                                    <i class="fa-solid fa-palette"></i> Activities & Events
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="cert-grid-new" data-aos="fade-up" data-aos-delay="200">
+            <div class="cert-gallery-section" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="cert-label"><i class="fa-solid fa-certificate"></i> Key Certifications</h3>
-                <div class="cert-items-wrap">
-                    <div class="cert-card glass">Power BI (Skill Nation)</div>
-                    <div class="cert-card glass">Advanced AI Tools (Be10x)</div>
-                    <div class="cert-card glass">Machine Learning (Coursera)</div>
-                    <div class="cert-card glass">AWS, Deloitte, TATA (Forage)</div>
+                <div class="cert-wrapper-scroll">
+                    <div class="cert-gallery">
+                        <div class="cert-item glass open-edu-popup" data-title="Power BI Certification" data-details="Comprehensive Power BI training by Skill Nation. Mastered data visualization, DAX queries, and dashboard creation." data-img="https://images.unsplash.com/photo-1551288049-bbda4833effb?auto=format&fit=crop&w=800&q=80">
+                            <img src="https://images.unsplash.com/photo-1551288049-bbda4833effb?auto=format&fit=crop&w=400&q=80" class="cert-image" />
+                            <div class="cert-overlay">
+                                <span>Power BI</span>
+                                <small>Skill Nation</small>
+                            </div>
+                        </div>
+                        <div class="cert-item glass open-edu-popup" data-title="Advanced AI Tools" data-details="Certified in Advanced AI & Automation Tools by Be10x. Focused on productivity enhancement using LLMs and prompt engineering." data-img="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=400&q=80" class="cert-image" />
+                            <div class="cert-overlay">
+                                <span>AI Tools</span>
+                                <small>Be10x</small>
+                            </div>
+                        </div>
+                        <div class="cert-item glass open-edu-popup" data-title="Machine Learning Specialization" data-details="Professional Machine Learning certification from Coursera. Covered Linear Regression, Neural Networks, and Cluster analysis." data-img="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80">
+                            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=400&q=80" class="cert-image" />
+                            <div class="cert-overlay">
+                                <span>Machine Learning</span>
+                                <small>Coursera</small>
+                            </div>
+                        </div>
+                        <div class="cert-item glass open-edu-popup" data-title="Virtual Internships (AWS, Deloitte, TATA)" data-details="Completed multiple high-impact virtual internships via Forage, gaining industry exposure in cloud and business analysis." data-img="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=400&q=80" class="cert-image" />
+                            <div class="cert-overlay">
+                                <span>Industry V-Interns</span>
+                                <small>AWS, Deloitte, TATA</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -510,10 +585,27 @@
         </div>
     </div>
 
+    <!-- Education Info Popup / Modal -->
+    <div class="edu-modal" id="edu-modal">
+        <div class="edu-modal-content glass">
+            <button id="close-edu-modal" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img id="modal-img" src="" alt="Education Image">
+                </div>
+                <div class="modal-text">
+                    <h3 id="modal-title">Title</h3>
+                    <p id="modal-desc">Description goes here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </body>
 </html>

@@ -6,6 +6,18 @@ window.addEventListener('load', () => {
             preloader.style.transition = 'opacity 1s ease-in-out, visibility 1s';
             preloader.style.opacity = '0';
             preloader.style.visibility = 'hidden';
+            
+            // GSAP Intro Animations
+            if (typeof gsap !== 'undefined') {
+                const tl = gsap.timeline();
+                tl.from('.navbar', { y: -100, opacity: 0, duration: 1, ease: 'power4.out' })
+                  .from('.hero-greeting', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out' }, '-=0.5')
+                  .from('.hero-name', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+                  .from('.hero-title', { opacity: 0, scale: 0.8, duration: 0.8, ease: 'back.out(1.7)' }, '-=0.6')
+                  .from('.hero-tagline', { opacity: 0, duration: 1 }, '-=0.4')
+                  .from('.hero-btns', { opacity: 0, y: 20, duration: 0.8, stagger: 0.2 }, '-=0.6')
+                  .from('.hero-img-container', { opacity: 0, scale: 0.5, duration: 1.2, ease: 'elastic.out(1, 0.5)' }, '-=1');
+            }
         }, 4000); // Wait for SVG animation to complete
     }
 });
@@ -94,6 +106,54 @@ if (document.getElementById('particles-js')) {
 
 // --- Scroll Progress & Navbar Behavior ---
 const scrollProgress = document.getElementById('scroll-progress');
+// --- GSAP Gallery Scroller Animation ---
+if (typeof gsap !== 'undefined') {
+    // Dynamic 'Peak Zoom', 'Tilt' and 'Depth' Effect on Scroll
+    gsap.utils.toArray('.scroller-slide').forEach((slide, i) => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: slide,
+                start: "top 110%", // Start when just below viewport
+                end: "bottom -10%", // End when just above viewport
+                scrub: 1.5
+            }
+        });
+
+        tl.fromTo(slide, 
+            { 
+                scale: 0.8, 
+                opacity: 1, // Full visibility from start
+                y: (i % 2 === 0 ? 80 : -80),
+                rotation: -15 
+            },
+            { 
+                scale: 1.35, // Larger peak scale
+                opacity: 1,  // Stay bright
+                y: 0,
+                rotation: 0,
+                duration: 0.5 
+            }
+        ).to(slide, {
+            scale: 0.8,
+            opacity: 1, // Stay bright till the end
+            y: (i % 2 === 0 ? -80 : 80),
+            rotation: 15,
+            duration: 0.5
+        });
+    });
+    
+    // Smooth Tilt of the whole container on scroll
+    gsap.to('.scroller-container', {
+        rotation: -15, // Dynamic peak angle
+        scrollTrigger: {
+            trigger: '.gallery-scroller',
+            start: "top center", 
+            end: "bottom top",   
+            scrub: 1.2
+        }
+    });
+}
+
 const navbar = document.querySelector('.navbar');
 
 // --- Mobile Menu Toggle ---
@@ -359,4 +419,72 @@ horizontalSections.forEach(section => {
             }
         }
     }, { passive: false });
+});
+
+// --- Dark/Light Mode Toggle ---
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = themeToggle?.querySelector('i');
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const isLight = document.body.classList.contains('light-theme');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        
+        if (themeIcon) {
+            themeIcon.classList.toggle('fa-sun', !isLight);
+            themeIcon.classList.toggle('fa-moon', isLight);
+        }
+    });
+
+    // Check preference
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-theme');
+        if (themeIcon) {
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
+        }
+    }
+}
+
+// --- Education Modal / Popup Logic ---
+const eduModal = document.getElementById('edu-modal');
+const closeEduModal = document.getElementById('close-edu-modal');
+const modalImg = document.getElementById('modal-img');
+const modalTitle = document.getElementById('modal-title');
+const modalDesc = document.getElementById('modal-desc');
+
+document.querySelectorAll('.open-edu-popup, .edu-inst-img').forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => {
+        if (eduModal) {
+            eduModal.classList.remove('image-only'); // Reset mode
+            
+            if (el.classList.contains('edu-inst-img')) {
+                // Image-only mode
+                eduModal.classList.add('image-only');
+                modalImg.src = el.src;
+            } else {
+                // Details mode (Image left, words right)
+                modalTitle.textContent = el.getAttribute('data-title');
+                modalDesc.textContent = el.getAttribute('data-details');
+                modalImg.src = el.getAttribute('data-img');
+            }
+            eduModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+});
+
+if (closeEduModal) {
+    closeEduModal.addEventListener('click', () => {
+        eduModal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+}
+
+window.addEventListener('click', (e) => {
+    if (e && e.target === eduModal) {
+        eduModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 });

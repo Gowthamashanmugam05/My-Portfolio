@@ -34,11 +34,24 @@ A premium, interactive, and recruiter-focused portfolio website for **Gowthama S
 
 ```bash
 /GS Portfolio
-  ├── index.html        # Main Entry
-  ├── style.css         # Styling
-  ├── script.js         # Interactivity
-  ├── vercel.json       # Deployment Config
-  └── Gowthama_Shanmugam_V_Resume.pdf
+  ├── index.html                # Main Entry
+  ├── /styles
+  │   └── style.css            # Optimized CSS
+  ├── /scripts
+  │   └── script.js            # Interactive JS (GSAP & AOS)
+  ├── /assets
+  │   ├── /images              # WebP-Ready Images
+  │   └── /docs                # Resume & Docs
+  ├── vercel.json               # Deployment Config
+  └── README.md
 ```
 
-Created with ⚡ by Antigravity.
+## ⚡ Performance Optimizations
+
+- **Modular Architecture**: Clean folder structure for assets, styles, and scripts.
+- **GSAP Premium Animations**: High-performance intro and hero effects.
+- **AOS Ready**: Dynamic scroll-based revealing elements.
+- **Lazy Loading**: `loading="lazy"` on all assets for faster initial load.
+- **Optimized JS**: Non-blocking `defer` scripts.
+
+Created with 🚀 by Antigravity.
